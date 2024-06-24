@@ -15,8 +15,12 @@ async function getComms(userId: string) {
 const imageUrl =
   "https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg";
 
-export default async function User({ params }: { params: { userId: string } }) {
-  const comms = await getComms(params.userId);
+interface IUser {
+  params: { userId: string };
+}
+
+export default async function Welcome({ params: { userId } }: IUser) {
+  const comms = await getComms(userId);
 
   const totalPriceFormatter = new Intl.NumberFormat("en-GB", {
     style: "currency",
