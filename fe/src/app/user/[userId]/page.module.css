@@ -1,0 +1,97 @@
+.main {
+  --color-primary: #0d8112;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey: #585858;
+  --color-pink: #ffb8ef;
+  --color-purple: #773e75;
+  --color-cream: #f5f5f5;
+
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.button {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  margin-top: 2rem;
+  z-index: 2;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--color-black);
+  text-transform: uppercase;
+}
+
+.buttonPrimary {
+  composes: button;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.buttonSecondary {
+  composes: button;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.totalPrice {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-grey);
+}
+
+.freeGift {
+  position: relative;
+  top: -1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--color-pink);
+  color: var(--color-purple);
+  width: 8rem;
+  text-align: center;
+  padding: 0.2rem;
+  border: 1px solid var(--color-purple);
+  transform: rotate(-5deg);
+}
+
+.catImage {
+  position: absolute;
+  top: 2rem;
+  width: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.textContainer {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey);
+  border-radius: 0.5rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+}
+
+.message {
+  font-weight: 300;
+}
